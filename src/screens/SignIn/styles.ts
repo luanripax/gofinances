@@ -1,5 +1,6 @@
-import { RFValue } from "react-native-responsive-fontsize";
 import styled from "styled-components/native";
+import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
+import { getBottomSpace } from "react-native-iphone-x-helper";
 
 export const Container = styled.View`
     flex: 1;
@@ -22,22 +23,22 @@ export const TitleWrapper = styled.View`
 export const Title = styled.Text`
     font-family: ${({theme}) => theme.fonts.medium};
     color: ${({theme}) => theme.colors.shape};
-    font-size: ${RFValue(30)}px;
+    font-size: ${hp(4.3)}px;
 
     text-align: center;
 
-    margin-top: 45px;
+    margin-top: ${hp(9)}px;
 `;
 
 export const SignInTitle = styled.Text`
     font-family: ${({theme}) => theme.fonts.regular};
     color: ${({theme}) => theme.colors.shape};
-    font-size: ${RFValue(16)}px;
+    font-size: ${hp(2.3)}px;
 
     text-align: center;
 
-    margin-top: 80px;
-    margin-bottom: 67px;
+    margin-top: ${hp(8) + getBottomSpace()}px;
+    margin-bottom: ${hp(7)}px;
 `;
 
 export const Footer = styled.View`

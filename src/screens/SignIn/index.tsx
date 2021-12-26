@@ -1,9 +1,10 @@
 import React from 'react';
-import { RFValue } from 'react-native-responsive-fontsize';
 
 import AppleSvg from '../../assets/apple.svg';
 import GoogleSvg from '../../assets/google.svg';
 import LogoSvg from '../../assets/logo.svg';
+
+import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
 
 import { 
     Container,
@@ -20,8 +21,8 @@ export function SignIn() {
             <Header>
                 <TitleWrapper>
                     <LogoSvg
-                        width={RFValue(120)}
-                        height={RFValue(68)}
+                        width={wp(30)}
+                        height={hp(9)}
                     />
 
                     <Title>
